@@ -1,0 +1,5 @@
+colorama==0.4.5
+mfrc522==0.0.7
+RPi.GPIO==0.7.1
+simplejson==3.17.6
+spidev==3.5
