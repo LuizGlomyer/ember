@@ -39,6 +39,5 @@ class ReaderRFID():
         while True:
             id, text = self.reader.read()
             print(f"Card id: {id}")
-            self.blink(False)
             
             return id
