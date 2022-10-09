@@ -1,0 +1,31 @@
+{
+    "0": {
+        "creation_date": "2022-10-01 19:24:03.740322",
+        "owner": "Luiz Glomyer",
+        "active": "true",
+        "permissions": [
+            "read",
+            "write",
+            "door"
+        ],
+        "access_log": {
+            "2022-10-01 19:24:03.740322": {
+                "at": "Home",
+                "resource": "door",
+                "granted": true,
+                "user_permissions": [
+                    "read",
+                    "write",
+                    "door"
+                ],
+                "environment": [
+                    "Linux",
+                    "raspberrypi",
+                    "5.15.61-v8+",
+                    "#1579 SMP PREEMPT Fri Aug 26 11:16:44 BST 2022",
+                    "aarch64"
+                ]
+            }
+        }
+    }
+}
