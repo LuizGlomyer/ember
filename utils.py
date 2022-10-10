@@ -3,6 +3,7 @@ import sys
 from time import sleep
 from colorama import Fore, Back, Style
 
+break_sequences = [0, '0', 'q', 'Q', 'quit', 'exit']
 
 def time_now():
     return f"{datetime.datetime.now()}"
@@ -27,5 +28,9 @@ def slprint(string, interval, foreground_color="", background_color=""):
     print(Style.RESET_ALL)
 
 
-def print_division():
+def print_separator():
     print("=" * 40)
+
+
+def print_system_separator():
+    print("-" * 30)
