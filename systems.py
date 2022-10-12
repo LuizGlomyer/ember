@@ -1,7 +1,7 @@
 import os
 from colorama import Back, Fore
 
-from utils import cprint, print_system_separator
+from utils import cprint, is_break_sequence, print_system_separator
 
 
 class Systems:
@@ -41,7 +41,7 @@ class AC:
                 user_input = input()
                 os.system('cls' if os.name == 'nt' else 'clear')
 
-                if user_input in ['0', 'q', 'Q', 'exit']:
+                if is_break_sequence(user_input):
                     print("Exiting AC menu...")
                     break
                 elif user_input == '1':
@@ -78,7 +78,6 @@ class Browser:
         print("Enter a website. Defaults to google.com")
         print("url: ", end="")
         website = input()
-        print(website)
 
         if website == "":
             website = "google.com"

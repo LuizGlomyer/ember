@@ -3,7 +3,6 @@ import sys
 from time import sleep
 from colorama import Fore, Back, Style
 
-break_sequences = [0, '0', 'q', 'Q', 'quit', 'exit']
 
 def time_now():
     return f"{datetime.datetime.now()}"
@@ -34,3 +33,10 @@ def print_separator():
 
 def print_system_separator():
     print("-" * 30)
+
+def is_break_sequence(user_input):
+    user_input = str(user_input).lower()
+    if user_input in [0, '0', 'q', 'quit', 'exit']:
+        return True
+    else:
+        return False

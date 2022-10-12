@@ -9,7 +9,7 @@ import json
 
 from rfid_reader import ReaderRFID
 from systems import Systems
-from utils import cprint, print_separator, slprint, time_now
+from utils import cprint, is_break_sequence, print_separator, slprint, time_now
 
 
 class Ember():
@@ -129,27 +129,30 @@ class Ember():
                 granted = self.access("admin")
                 if granted:
                     self.admin_mode()
-            if user_input in [0, '0', 'q', 'Q']:
-                os.abort()
+            if is_break_sequence(user_input):
+                break
 
     def user_mode(self) -> None:
-        cprint("Please select a system", Fore.CYAN, Back.BLACK)
-        print('1 - ac')
-        print('2 - browser')
-        print('0 - exit')
-        print("\nEnter: ", end="")
-        user_input = input()
-        os.system('cls' if os.name == 'nt' else 'clear')
+        while True:
+            cprint("Please select a system", Fore.CYAN, Back.BLACK)
+            print('1 - ac')
+            print('2 - browser')
+            print('0 - exit')
+            print("\nEnter: ", end="")
+            user_input = input()
+            os.system('cls' if os.name == 'nt' else 'clear')
 
-        if user_input == '1':
-            granted = self.access("ac")
-            if granted:
-                self.systems.ac.menu()
-                granted = False
-        elif user_input == '2':
-            granted = self.access("browser")
-            if granted:
-                self.systems.browser.browse()
+            if user_input == '1':
+                granted = self.access("ac")
+                if granted:
+                    self.systems.ac.menu()
+                    granted = False
+            elif user_input == '2':
+                granted = self.access("browser")
+                if granted:
+                    self.systems.browser.browse()
+            elif is_break_sequence(user_input):
+                break
 
     def admin_mode(self) -> None:
         while True:
@@ -180,7 +183,7 @@ class Ember():
                 pass
             elif user_input == '3':
                 pass
-            elif user_input == '0':
+            elif is_break_sequence(user_input):
                 break
 
     def connect_to_blockchain():
