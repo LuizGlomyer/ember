@@ -6,8 +6,7 @@ EMBER means **E**ntry **M**ediated by **B**lockchain, **E**thereum and **R**aspb
 (originally *Entrada Mediada por Blockchain, Ethereum e Raspberry*, in brazillian portuguese). Saddly the project proposal did not pass, so the code does not contemplate the Blockchain aspect of the project. However, the access control system is fully functional.
 
 Here is a video demonstration of the project (in brazillian portuguese):
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SfwXLK8K3jo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![](https://i.ytimg.com/vi/SfwXLK8K3jo/maxresdefault.jpg)](https://youtu.be/SfwXLK8K3jo)
 
 ![Electronics schema made in Fritzing](https://files.catbox.moe/hyq23r.png)
 
